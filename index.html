@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airshow People Bingo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Airshow People Bingo</p>
+        <h1>Shuffle a card. Tap the squares. Call BINGO.</h1>
+        <p class="subtext">A 5×5 bingo card built from your airshow scavenger hunt list. The center square is always FREE.</p>
+      </div>
+      <div class="controls">
+        <button id="newCardBtn" class="primary">New Card</button>
+        <button id="resetMarksBtn">Reset Marks</button>
+      </div>
+    </section>
+
+    <section id="status" class="status">Ready. Generate a card and start spotting.</section>
+
+    <section class="card-wrap" aria-label="Bingo card">
+      <div class="bingo-head">
+        <div>B</div><div>I</div><div>N</div><div>G</div><div>O</div>
+      </div>
+      <div id="bingoGrid" class="bingo-grid"></div>
+    </section>
+
+    <section class="tools">
+      <details>
+        <summary>Master item list</summary>
+        <ol id="itemList"></ol>
+      </details>
+      <details>
+        <summary>Edit list instructions</summary>
+        <p>Open <strong>app.js</strong> in VS Code. Find <strong>MASTER_ITEMS</strong>. Add, remove, or rename items inside the quotation marks. Save the file, then refresh this page.</p>
+      </details>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
