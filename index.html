@@ -1,46 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Airshow People Bingo</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="app">
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Airshow People Bingo</p>
-        <h1>Shuffle a card. Tap the squares. Call BINGO.</h1>
-        <p class="subtext">A 5×5 bingo card built from your airshow scavenger hunt list. The center square is always FREE.</p>
-      </div>
-      <div class="controls">
-        <button id="newCardBtn" class="primary">New Card</button>
-        <button id="resetMarksBtn">Reset Marks</button>
-      </div>
-    </section>
+    <h1>Airshow People Bingo</h1>
 
-    <section id="status" class="status">Ready. Generate a card and start spotting.</section>
+    <p class="subtitle">
+      Tap squares as you spot them. Get 5 in a row and call BINGO.
+    </p>
 
-    <section class="card-wrap" aria-label="Bingo card">
-      <div class="bingo-head">
-        <div>B</div><div>I</div><div>N</div><div>G</div><div>O</div>
-      </div>
-      <div id="bingoGrid" class="bingo-grid"></div>
-    </section>
+    <div class="controls">
+      <button id="newCardBtn" type="button">New Card</button>
+      <button id="resetBtn" type="button">Reset Marks</button>
+    </div>
 
-    <section class="tools">
-      <details>
-        <summary>Master item list</summary>
-        <ol id="itemList"></ol>
-      </details>
-      <details>
-        <summary>Edit list instructions</summary>
-        <p>Open <strong>app.js</strong> in VS Code. Find <strong>MASTER_ITEMS</strong>. Add, remove, or rename items inside the quotation marks. Save the file, then refresh this page.</p>
-      </details>
-    </section>
+    <div id="message" class="message">New card generated.</div>
+
+    <div class="bingo-letters" aria-label="Bingo column letters">
+      <div>B</div>
+      <div>I</div>
+      <div>N</div>
+      <div>G</div>
+      <div>O</div>
+    </div>
+
+    <div id="bingoBoard" class="bingo-board" aria-label="Bingo board"></div>
   </main>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
